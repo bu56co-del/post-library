@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — Post Library</title>
+<style>
+  :root { --ink:#1c2330; --mut:#5b6472; --line:#e3e7ee; --acc:#3b5bd6; --bg:#ffffff; --panel:#f6f8fb; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+  .wrap { max-width:720px; margin:0 auto; padding:48px 24px 80px; }
+  h1 { font-size:26px; margin:0 0 4px; letter-spacing:-.01em; }
+  .sub { color:var(--mut); font-size:14px; margin-bottom:28px; }
+  h2 { font-size:17px; margin:30px 0 8px; }
+  p, li { font-size:15px; }
+  .tl { background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:14px 18px; font-size:15px; }
+  table { border-collapse:collapse; width:100%; font-size:14px; margin:10px 0; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--mut); font-weight:600; font-size:12.5px; text-transform:uppercase; letter-spacing:.04em; }
+  code { background:var(--panel); border-radius:4px; padding:1px 6px; font-size:13px; }
+  a { color:var(--acc); }
+  footer { margin-top:40px; padding-top:16px; border-top:1px solid var(--line); color:var(--mut); font-size:13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Privacy Policy — Post Library</h1>
+  <div class="sub">Effective date: 18 July 2026</div>
+
+  <p class="tl"><b>The short version:</b> everything Post Library saves stays on your own computer. The developer operates no servers, collects no data, and never sees anything you save. The only time any data leaves your device is if <i>you</i> choose to run AI categorization, which sends post text directly from your browser to the AI provider you picked, using your own API key.</p>
+
+  <h2>What Post Library does</h2>
+  <p>Post Library saves posts from your own logged-in account's Saved list into a private, searchable library on your device, so you can browse and organize them offline. It works only on content your own account can already see.</p>
+
+  <h2>Data the developer collects</h2>
+  <p><b>None.</b> Post Library has no analytics, no tracking, no telemetry, no ads and no developer-operated servers. Nothing you save, type or configure is ever transmitted to the developer.</p>
+
+  <h2>Where your data lives</h2>
+  <ul>
+    <li><b>Your library</b> (post text, replies, categories, thumbnails, imported videos) is stored in the browser's local extension storage (IndexedDB / chrome.storage) on your device.</li>
+    <li><b>Media files and the offline backup page</b> (<code>backup.html</code>) are written to a folder you choose inside your Downloads folder.</li>
+    <li><b>Settings and API keys</b> are stored in local extension storage on your device only.</li>
+  </ul>
+
+  <h2>Optional AI categorization</h2>
+  <p>Off by default. If you choose to run it, the <b>text</b> of your selected posts (never media files) is sent directly from your browser to the AI provider you selected — Google Gemini or Agnes AI — authenticated with <b>your own API key</b>. The developer is not part of that connection and cannot see it. The provider's own privacy policy governs its handling of that text. Your API key is stored only on your device and is only ever sent to that provider itself.</p>
+
+  <h2>OCR (reading text inside images)</h2>
+  <p>Optional, off by default, and runs entirely on your device using a bundled engine. Images are never uploaded anywhere.</p>
+
+  <h2>Why each permission is needed</h2>
+  <table>
+    <tr><th>Permission</th><th>Used for</th></tr>
+    <tr><td><code>storage</code>, <code>unlimitedStorage</code></td><td>Keeping your library (which can include videos) on your device.</td></tr>
+    <tr><td><code>downloads</code></td><td>Saving post media and the offline backup page into your Downloads folder.</td></tr>
+    <tr><td><code>tabs</code>, <code>scripting</code>, access to threads.com</td><td>Opening your Saved list and reading the posts on it while you are logged in — only when you press Start.</td></tr>
+    <tr><td>Access to Instagram/Facebook CDN domains</td><td>Downloading the images and videos belonging to your saved posts (that is where Threads hosts media files).</td></tr>
+    <tr><td>Optional AI provider domains</td><td>Requested only if you enable AI categorization, to let your browser call the provider you chose with your own key.</td></tr>
+  </table>
+
+  <h2>Data sharing and selling</h2>
+  <p>Post Library shares no data with anyone and sells nothing. There is nothing to share — the developer holds no user data.</p>
+
+  <h2>Deleting your data</h2>
+  <p>You are in full control: use <b>Clear library</b> in the extension to remove all records, delete the media folder in Downloads like any normal files, and uninstall the extension to remove its local storage. Nothing persists anywhere else.</p>
+
+  <h2>Children</h2>
+  <p>Post Library is not directed at children under 13.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>Any change will be posted at this page with a new effective date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: <a href="mailto:support@yaka310.com"><b>support@yaka310.com</b></a></p>
+
+  <footer>Post Library is an unofficial tool and is not affiliated with, endorsed by, or connected to Meta Platforms, Inc.</footer>
+</div>
+</body>
+</html>
