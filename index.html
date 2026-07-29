@@ -25,7 +25,7 @@
 <body>
 <div class="wrap">
   <h1>Privacy Policy — Post Library</h1>
-  <div class="sub">Effective date: 18 July 2026</div>
+  <div class="sub">Effective date: 18 July 2026 · Last updated: 29 July 2026</div>
 
   <p class="tl"><b>The short version:</b> everything Post Library saves stays on your own computer. The developer operates no servers, collects no data, and never sees anything you save. The only time any data leaves your device is if <i>you</i> choose to run AI categorization, which sends post text directly from your browser to the AI provider you picked, using your own API key.</p>
 
@@ -52,7 +52,7 @@
   <table>
     <tr><th>Permission</th><th>Used for</th></tr>
     <tr><td><code>storage</code>, <code>unlimitedStorage</code></td><td>Keeping your library (which can include videos) on your device.</td></tr>
-    <tr><td><code>downloads</code></td><td>Saving post media and the offline backup page into your Downloads folder.</td></tr>
+    <tr><td><code>downloads</code></td><td>Saving post media and the offline backup page into your Downloads folder, and — only when you tick that box while deleting — removing that post's own downloaded files again.</td></tr>
     <tr><td><code>scripting</code>, access to threads.com</td><td>Opening your Saved list and reading the posts on it while you are logged in — only when you press Start.</td></tr>
     <tr><td>Access to Instagram/Facebook CDN domains</td><td>Downloading the images and videos belonging to your saved posts (that is where Threads hosts media files).</td></tr>
     <tr><td>Optional AI provider domains</td><td>Requested only if you enable AI categorization, to let your browser call the provider you chose with your own key.</td></tr>
@@ -62,7 +62,13 @@
   <p>Post Library shares no data with anyone and sells nothing. There is nothing to share — the developer holds no user data.</p>
 
   <h2>Deleting your data</h2>
-  <p>You are in full control: use <b>Clear library</b> in the extension to remove all records, delete the media folder in Downloads like any normal files, and uninstall the extension to remove its local storage. Nothing persists anywhere else.</p>
+  <p>You are in full control.</p>
+  <ul>
+    <li><b>Deleting one post</b> (or a batch, via Declutter) asks whether to delete that post's downloaded photos and videos as well. The box is unticked by default: leave it alone and the files stay on your disk untouched.</li>
+    <li><b>Clear library</b> removes every record, and its final step offers the same choice for all of the downloaded files at once.</li>
+    <li>When you do ask for files to be deleted, the extension only ever removes files it downloaded itself, sitting inside the post's own folder within the library folder your <i>Save to Downloads/</i> setting points at. It cannot reach anything else in your Downloads folder, and it tells you afterwards exactly how many files were deleted and how many it could not find.</li>
+    <li>You can of course still delete the media folder yourself like any normal files, and uninstalling the extension removes its local storage. Nothing persists anywhere else.</li>
+  </ul>
 
   <h2>Chrome Web Store User Data Policy</h2>
   <p>Post Library's use of information received from browser APIs adheres to the <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use" rel="noopener">Chrome Web Store User Data Policy</a>, including its Limited Use requirements.</p>
