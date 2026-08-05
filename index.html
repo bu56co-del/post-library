@@ -25,7 +25,7 @@
 <body>
 <div class="wrap">
   <h1>Privacy Policy — Post Library</h1>
-  <div class="sub">Effective date: 18 July 2026 · Last updated: 29 July 2026</div>
+  <div class="sub">Effective date: 18 July 2026 · Last updated: 5 August 2026</div>
 
   <p class="tl"><b>The short version:</b> everything Post Library saves stays on your own computer. The developer operates no servers, collects no data, and never sees anything you save. The only time any data leaves your device is if <i>you</i> choose to run AI categorization, which sends post text directly from your browser to the AI provider you picked, using your own API key.</p>
 
@@ -37,7 +37,7 @@
 
   <h2>Where your data lives</h2>
   <ul>
-    <li><b>Your library</b> (post text, replies, categories, thumbnails, imported videos) is stored in the browser's local extension storage (IndexedDB / chrome.storage) on your device.</li>
+    <li><b>Your library</b> (post text, replies or comments, categories — which may be the name of the Instagram collection a post was in — thumbnails, imported videos) — from Threads and, if you turn it on, Instagram — is stored in the browser's local extension storage (IndexedDB / chrome.storage) on your device.</li>
     <li><b>Media files and the offline backup page</b> (<code>backup.html</code>) are written to a folder you choose inside your Downloads folder.</li>
     <li><b>Settings and API keys</b> are stored in local extension storage on your device only.</li>
   </ul>
@@ -45,16 +45,17 @@
   <h2>Optional AI categorization</h2>
   <p>Off by default. If you choose to run it, the <b>text</b> of your selected posts (never media files) is sent directly from your browser to the AI provider you selected — Google Gemini or Agnes AI — authenticated with <b>your own API key</b>. The developer is not part of that connection and cannot see it. The provider's own privacy policy governs its handling of that text. Your API key is stored only on your device and is only ever sent to that provider itself.</p>
 
-  <h2>OCR (reading text inside images)</h2>
-  <p>Optional, off by default, and runs entirely on your device using a bundled engine. Images are never uploaded anywhere.</p>
+  <h2>Reading the text inside pictures</h2>
+  <p>Optional, off by default, and runs entirely on your device using an engine bundled inside the extension. Pictures are never uploaded anywhere, and no network request is made to read them.</p>
 
   <h2>Why each permission is needed</h2>
   <table>
     <tr><th>Permission</th><th>Used for</th></tr>
     <tr><td><code>storage</code>, <code>unlimitedStorage</code></td><td>Keeping your library (which can include videos) on your device.</td></tr>
     <tr><td><code>downloads</code></td><td>Saving post media and the offline backup page into your Downloads folder, and — only when you tick that box while deleting — removing that post's own downloaded files again.</td></tr>
-    <tr><td><code>scripting</code>, access to threads.com</td><td>Opening your Saved list and reading the posts on it while you are logged in — only when you press Start.</td></tr>
-    <tr><td>Access to Instagram/Facebook CDN domains</td><td>Downloading the images and videos belonging to your saved posts (that is where Threads hosts media files).</td></tr>
+    <tr><td><code>scripting</code>, access to threads.com</td><td>Opening your Threads Saved list and reading the posts on it while you are logged in — only when you press Start.</td></tr>
+    <tr><td>Access to instagram.com <b>(optional)</b></td><td>Not requested at install. Only if you press the Instagram button is Chrome asked for it, and only then can the extension open your own Instagram saved list and read the posts on it. If you leave <b>use my collection names as categories</b> ticked it also reads the names of your saved collections, so each post can be filed under the name you gave it; the same access lets you paste a single Instagram post link to save just that post. You can withdraw it at any time in Chrome's extension settings, and nothing about Threads is affected.</td></tr>
+    <tr><td>Access to Instagram/Facebook CDN domains</td><td>Downloading the images and videos belonging to your saved posts — Threads and Instagram both host their media on these domains.</td></tr>
     <tr><td>Optional AI provider domains</td><td>Requested only if you enable AI categorization, to let your browser call the provider you chose with your own key.</td></tr>
   </table>
 
